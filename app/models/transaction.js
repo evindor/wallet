@@ -15,8 +15,11 @@ var TransactionModel = DS.Model.extend({
   }.property('this.outputs'),
   
   isOutbound: function() {
-    
-  }
+    var ins = this.get('inputs').filter(function(input) {
+      if (input.addresses.contains(window._address)) return true;
+    });
+    return ins.length > 0;
+  }.property('this.inputs')
 
 });
 

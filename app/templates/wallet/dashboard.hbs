@@ -9,7 +9,7 @@ Transactions ({{model.length}}):
 {{log model}}
 <ul>
 {{#each tx in model}}
-<li>{{tx.id}} ({{tx.confirmations}}) - {{tx.value}}</li>
+<li {{bind-attr class="tx.isOutbound:outbound:inbound"}}>{{tx.id}} ({{tx.confirmations}}) - {{tx.value}}</li>
 {{/each}}
 </ul>
 

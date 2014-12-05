@@ -1,6 +1,8 @@
 <div class="background-image"></div>
+{{ticker-board price=ticker.price ticker=ticker.id}}
 <div class="login-box">
-    {{#link-to 'wallet.new' class="login-box-submit"}}Create new wallet{{/link-to}}
-    {{#link-to 'wallet.open' class="login-box-submit"}}Open existing wallet{{/link-to}}
+  {{input class="login-box-field" placeholder="Pass pharse longer than 20 symbols" action="createWallet"}}
+  <p class="login-box-welcome-text">Hello, coins.ph! I hope you'll like this project :) Please come up with relatively secure pass phrase,
+  type it in the box above and get started!</p>
 </div>
 {{outlet}}

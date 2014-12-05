@@ -1,0 +1,8 @@
+.ticker-board {
+  color: white;
+  font-size: 32px;
+  font-weight: 100;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
