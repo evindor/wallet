@@ -3,7 +3,8 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
-app.import('vendor/bitcoinjs-min.js')
+app.import('vendor/bitcoinjs-min.js');
+app.import('vendor/chain-jquery.min.js');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //

@@ -1,0 +1,6 @@
+<form {{action "submit" on="submit"}}>
+  <p><label>Amount {{input type="number" value=amount}}</label></p>
+  <p><label>Address {{input type="text" value=address}}</label></p>
+
+  <input type="submit" {{bindAttr value=submitTitle}}>
+</form>

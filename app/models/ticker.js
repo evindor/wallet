@@ -1,5 +1,11 @@
 import DS from 'ember-data';
 
-export default DS.Model.extend({
+var Ticker = DS.Model.extend({
   
 });
+
+Ticker.reopenClass({
+    
+});
+
+export default Ticker;

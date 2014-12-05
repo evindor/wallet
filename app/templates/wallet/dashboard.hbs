@@ -1,12 +1,11 @@
-Your bitcoin address is {{address}}
+Your bitcoin address is {{address.id}}
 <br>
-Your balance is {{balance}} btc.
+Your balance is {{address.total_balance}} btc.
 
 Send bitcoins:
-{{input placeholder="Amount"}}
-{{input placeholder="Address"}}
+{{send-form submit="sendBTC" submitTitle="Send"}}
 
-Transactions:
+Transactions ({{model.length}}):
 {{log model}}
 <ul>
 {{#each tx in model}}
