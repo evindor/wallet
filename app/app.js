@@ -17,15 +17,4 @@ var App = Ember.Application.extend({
 
 loadInitializers(App, config.modulePrefix);
 
-App.TransactionAdapter = DS.RESTAdapter.extend({
-  host: 'https://api.chain.com',
-  namespace: '/v2/bitcoin/',
-  buildURL: function() {
-    console.log('!!!!!!!');
-    console.log(arguments);
-    console.log(this);
-    return this._super();
-  }
-});
-
 export default App;

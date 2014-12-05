@@ -5,7 +5,12 @@ var TransactionModel = DS.Model.extend({
   inputs: DS.attr(),
   outputs: DS.attr(),
   fees: DS.attr(),
-  amount: DS.attr()
+  value: function() {
+    var outs = this.get('outputs').filter(function(out) {
+      if (out.addresses.contains(window._address)) return true;
+    });
+    return outs.reduce(function(memo, out) { return memo + out.value}, 0);
+  }.property('this.outputs')
 });
 
 export default TransactionModel;

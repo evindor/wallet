@@ -10,7 +10,7 @@ Transactions:
 {{log model}}
 <ul>
 {{#each tx in model}}
-    <li>{{tx.confirmations}}</li>
+<li>{{tx.id}} ({{tx.confirmations}}) - {{tx.value}}</li>
 {{/each}}
 </ul>
 
