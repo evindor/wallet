@@ -79,3 +79,19 @@ body {
 .outbound {
   color: red;
 }
+
+.dashboard-balance {
+  font-size: 40px;
+  text-align: center;
+  background: #3399FF;
+  color: white;
+  padding: 10px 0;
+}
+
+.dashboard-address {
+  font-size: 20px;
+  text-align: center;
+  background: #3399FF;
+  color: white;
+  padding: 5px 0 10px 0;
+}

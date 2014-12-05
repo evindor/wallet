@@ -1,6 +1,10 @@
-Your bitcoin address is {{address.id}}
-<br>
-Your balance is {{address.total_balance}} btc.
+<div class="dashboard-balance">
+  {{address.total_balance_btc}}  
+  &nbsp;฿
+</div>
+<div class="dashboard-address">
+  {{address.id}}  
+</div>
 
 Send bitcoins:
 {{send-form submit="sendBTC" submitTitle="Send"}}
