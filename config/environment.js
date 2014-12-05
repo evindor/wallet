@@ -43,5 +43,13 @@ module.exports = function(environment) {
 
   }
 
+  ENV.apiKey = process.env.COINS_APIKEY;
+  ENV.apiSecret = process.env.COINS_APISECRET;
+  ENV.contentSecurityPolicy = {
+    'connect-src': "'self' api.bitcoinaverage.com api.chain.com",
+    'font-src': "'self' fonts.googleapis.com fonts.gstatic.com",
+    'style-src': "'self' fonts.googleapis.com"
+  }
+
   return ENV;
 };

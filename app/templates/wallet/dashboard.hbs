@@ -1,0 +1,17 @@
+Your bitcoin address is {{address}}
+<br>
+Your balance is {{balance}} btc.
+
+Send bitcoins:
+{{input placeholder="Amount"}}
+{{input placeholder="Address"}}
+
+Transactions:
+{{log model}}
+<ul>
+{{#each tx in model}}
+    <li>{{tx.confirmations}}</li>
+{{/each}}
+</ul>
+
+{{outlet}}
