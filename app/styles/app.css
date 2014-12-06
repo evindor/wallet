@@ -72,8 +72,8 @@ body {
   font-size: 20px;
   border: 1px solid #0066CC;
   -webkit-appearance: none;
-  background: #3399FF;
-  color: #fff;
+  background: #226CE0;
+  color: #D4DCFF;
 }
 
 .outbound {
@@ -83,15 +83,68 @@ body {
 .dashboard-balance {
   font-size: 40px;
   text-align: center;
-  background: #3399FF;
-  color: white;
+  background: #226CE0;
+  color: #D4DCFF;
   padding: 10px 0;
 }
 
 .dashboard-address {
   font-size: 20px;
   text-align: center;
-  background: #3399FF;
-  color: white;
+  background: #226CE0;
+  color: #D4DCFF;
   padding: 5px 0 10px 0;
+}
+
+.qrcode-icon {
+  background: url('/assets/qrcode.png') no-repeat 0 0;
+  background-size: contain;
+  width: 18px;
+  height: 18px;
+  margin-left: 15px;
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}
+
+.dashboard-send-form {
+  color: #226CE0;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.send-form-field {
+  border: none;
+  border-bottom: 1px solid #2E382E;
+  font-weight: bold;
+  font-size: 24px;
+  padding: 0 0 2px 0;
+  color: #2E382E;
+}
+
+.send-form-field:focus {
+  outline: none;
+  border-bottom: 1px solid #226CE0;
+}
+
+.send-form-button {
+  -webkit-appearance: none;
+  background: #3993DD;
+  color: #D4DCFF;
+  border: none;
+  margin-left: 15px;
+  font-size: 20px;
+}
+
+.dashboard-no-transactions {
+  font-weight: bold;
+  color: #999;
+  font-size: 32px;
+  text-align: center;
+}
+
+.transaction-hash {
+  color: #3993DD;
 }

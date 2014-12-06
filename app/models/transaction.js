@@ -13,13 +13,26 @@ var TransactionModel = DS.Model.extend({
     });
     return outs.reduce(function(memo, out) { return memo + out.value}, 0);
   }.property('this.outputs'),
-  
+
+  value_btc: function() {
+    return this.get('value') / 100000000;
+  }.property('value'),
+
   isOutbound: function() {
     var ins = this.get('inputs').filter(function(input) {
       if (input.addresses.contains(window._address)) return true;
     });
     return ins.length > 0;
-  }.property('this.inputs')
+  }.property('this.inputs'),
+
+  shortHash: function() {
+    var id = this.get('id');
+    return [id.slice(0, 3), '...', id.slice(id.length - 3, id.length)].join('');
+  }.property('this.id'),
+
+  blockchainLink: function() {
+    return "https://blockchain.info/tx/" + this.get('id');
+  }.property('this.id')
 
 });
 

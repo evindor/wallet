@@ -54,6 +54,10 @@ export default Ember.Controller.extend({
         console.log(arguments);
         console.log('=================================')
       });
+    },
+
+    showQRCode: function() {
+      
     }
   }
 });

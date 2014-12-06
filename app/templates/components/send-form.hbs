@@ -1,6 +1,5 @@
 <form {{action "submit" on="submit"}}>
-  <p><label>Amount {{input type="number" value=amount}}</label></p>
-  <p><label>Address {{input type="text" value=address}}</label></p>
-
-  <input type="submit" {{bindAttr value=submitTitle}}>
+  Send {{input type="text" value=amount class="send-form-field" size=8}} &nbsp;฿
+  to address {{input type="text" value=address class="send-form-field" size=40 placeholder="1HePqVMogEu6mVH793Y6oVXxT7swTrSiXA"}}
+  <input type="submit" class="send-form-button" {{bindAttr value=submitTitle}}>
 </form>
