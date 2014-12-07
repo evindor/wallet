@@ -16,7 +16,7 @@ body {
   left: -3px;
   top: -3px;
   position: fixed;
-  background: url('bg2.jpg') no-repeat 0 0;
+  background: url('bg1.jpg') no-repeat 0 0;
   background-size: cover;
   -webkit-filter: blur(2px);
 }
