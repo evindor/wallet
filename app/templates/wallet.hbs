@@ -1,6 +1,7 @@
 <div class="dashboard-balance">
   {{address.total_balance_btc}}  
   &nbsp;฿
+  {{#link-to 'logout' class="dashboard-logout"}}Close wallet{{/link-to}}
 </div>
 <div class="dashboard-address">
   {{address.id}}
@@ -12,7 +13,6 @@
 
 {{#if model.length}}
   <div class="dashboard-transactions">
-    Transactions ({{model.length}}):
     <ul class="dashboard-transactions-list">
       {{#each tx in model}}
         <li {{bind-attr class=":dashboard-transaction tx.isOutbound:outbound:inbound"}}>

@@ -9,6 +9,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('index', {path: '/'});
   this.route('wallet');
+  this.route('logout');
 });
 
 export default Router.extend(ApplicationRouteMixin);

@@ -77,7 +77,7 @@ body {
 }
 
 .outbound {
-  color: red;
+
 }
 
 .dashboard-balance {
@@ -156,18 +156,35 @@ body {
 }
 
 .dashboard-transactions-list {
-
+  padding: 0;
 }
 
 .dashboard-transaction {
   list-style: none;
+  padding-left: 60px;
+  line-height: 60px;
+  position: relative;
+  border-bottom: 1px dotted #DDD;
 }
 
 .dashboard-transaction:before {
-  content: "+";
-  color: #999;
-  font-size: 40px;
+  font-size: 60px;
   font-weight: bold;
+  position: absolute;
+  top: -1;
+  left: 0;
+}
+
+.dashboard-transaction.inbound:before {
+  content: "+";
+  color: #3993DD;
+}
+
+.dashboard-transaction.outbound:before {
+  content: "-";
+  color: #CC3300;
+  top: -6px;
+  left: 7px;
 }
 
 .dashboard-transaction-value {
@@ -176,4 +193,11 @@ body {
 
 .dashboard-transaction-confirmations {
 
+}
+
+.dashboard-logout {
+  color: #CC3300;
+  position: absolute;
+  font-size: 14px;
+  right: 20px;
 }
