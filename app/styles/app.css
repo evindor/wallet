@@ -16,7 +16,7 @@ body {
   left: -3px;
   top: -3px;
   position: fixed;
-  background: url('/assets/bg2.jpg') no-repeat 0 0;
+  background: url('assets/bg2.jpg') no-repeat 0 0;
   background-size: cover;
   -webkit-filter: blur(2px);
 }
@@ -97,7 +97,7 @@ body {
 }
 
 .qrcode-icon {
-  background: url('/assets/qrcode.png') no-repeat 0 0;
+  background: url('assets/qrcode.png') no-repeat 0 0;
   background-size: contain;
   width: 18px;
   height: 18px;
