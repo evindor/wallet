@@ -1,3 +1,4 @@
+<div {bind-attr class=":qrcode isQRCodeVisible:visible"}></div>
 <div class="dashboard-balance">
   {{address.total_balance_btc}}  
   &nbsp;฿
@@ -15,7 +16,7 @@
   <div class="dashboard-transactions">
     <ul class="dashboard-transactions-list">
       {{#each tx in model}}
-        <li {{bind-attr class=":dashboard-transaction tx.isOutbound:outbound:inbound"}}>
+        <li {{bind-attr class=":dashboard-transaction tx.isOutbound:outbound:inbound tx.confirmations:confirmed:unconfirmed"}}>
           {{#if tx.isOutbound}}
             Sent
           {{else}}
@@ -24,7 +25,7 @@
           <span class="dashboard-transaction-value">{{tx.value_btc}}</span>
           &nbsp;฿ in tracsaction
           <a {{bind-attr href="tx.blockchainLink"}} target="_blank" class="transaction-hash">{{tx.shortHash}}</a>
-          <span class="dashboard-tarnsaction-confirmations">{{tx.confirmations}} confirmations</span>
+          <span class="dashboard-transaction-confirmations">{{tx.confirmations}} confirmations</span>
         </li>
       {{/each}}
     </ul>
