@@ -20,7 +20,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'production') {
-    baseURL: '/wallet',
+    ENV.baseURL = '/wallet';
   }
 
   if (environment === 'development') {
