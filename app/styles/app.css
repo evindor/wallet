@@ -148,3 +148,32 @@ body {
 .transaction-hash {
   color: #3993DD;
 }
+
+.dashboard-transactions {
+  width: 600px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.dashboard-transactions-list {
+
+}
+
+.dashboard-transaction {
+  list-style: none;
+}
+
+.dashboard-transaction:before {
+  content: "+";
+  color: #999;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.dashboard-transaction-value {
+
+}
+
+.dashboard-transaction-confirmations {
+
+}

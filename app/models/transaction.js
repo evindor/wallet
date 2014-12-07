@@ -8,8 +8,13 @@ var TransactionModel = DS.Model.extend({
   block_time: DS.attr(),
 
   value: function() {
+    var model = this;
     var outs = this.get('outputs').filter(function(out) {
-      if (out.addresses.contains(window._address)) return true;
+      if (model.get('isOutbound')) {
+        return out.addresses.indexOf(window._address) === -1;
+      } else {
+        return out.addresses.contains(window._address); 
+      }
     });
     return outs.reduce(function(memo, out) { return memo + out.value}, 0);
   }.property('outputs'),
