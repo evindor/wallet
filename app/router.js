@@ -8,13 +8,7 @@ var Router = Ember.Router.extend({
 
 Router.map(function() {
   this.route('index', {path: '/'});
-  this.route('login');
-  this.resource('wallet', function() {
-    this.route('new');
-    this.route('open');
-  });
-  this.route('wallet/new');
-  this.route('wallet/dashboard');
+  this.route('wallet');
 });
 
 export default Router.extend(ApplicationRouteMixin);

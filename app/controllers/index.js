@@ -12,7 +12,7 @@ export default Ember.Controller.extend({
             // another solution to get props from controller in adapters
             // @see http://stackoverflow.com/questions/19818957/accessing-controller-properties-within-ember-data-rest-adapter
             window._address = wallet.getAddress();
-            this.transitionToRoute('wallet/dashboard');
+            this.transitionToRoute('wallet');
             return false;
         }
     }

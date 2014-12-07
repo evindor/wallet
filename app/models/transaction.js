@@ -12,7 +12,7 @@ var TransactionModel = DS.Model.extend({
       if (out.addresses.contains(window._address)) return true;
     });
     return outs.reduce(function(memo, out) { return memo + out.value}, 0);
-  }.property('this.outputs'),
+  }.property('outputs'),
 
   value_btc: function() {
     return this.get('value') / 100000000;
@@ -23,16 +23,16 @@ var TransactionModel = DS.Model.extend({
       if (input.addresses.contains(window._address)) return true;
     });
     return ins.length > 0;
-  }.property('this.inputs'),
+  }.property('inputs'),
 
   shortHash: function() {
     var id = this.get('id');
     return [id.slice(0, 3), '...', id.slice(id.length - 3, id.length)].join('');
-  }.property('this.id'),
+  }.property('id'),
 
   blockchainLink: function() {
     return "https://blockchain.info/tx/" + this.get('id');
-  }.property('this.id')
+  }.property('id')
 
 });
 

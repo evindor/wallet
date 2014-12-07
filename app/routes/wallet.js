@@ -1,10 +1,14 @@
 import Ember from 'ember';
+import AddressModel from '../models/address';
 
 export default Ember.Route.extend({
-    new: function() {
-        console.log('123')
+    setupController: function(controller, model) {
+        controller.set('model', this.store.find('transaction'));
+        controller.set('address', this.store.find('address', window._address));
     },
-    open: function() {
-        console.log('open');
+
+    model: function() {
+        this.store.find('transaction');
     }
 });
+
