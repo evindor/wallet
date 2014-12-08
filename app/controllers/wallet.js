@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
   needs: ['application'],
   sortProperties: ['confirmations'],
+  sortAscending: false,
 
   init: function() {
     var wallet = this.get('controllers.application').get('wallet');
@@ -18,7 +19,7 @@ export default Ember.Controller.extend({
 
   balance: function() {
     return this.get('wallet').getBalance();
-  }.property('this.wallet'),
+  }.property('wallet'),
 
   actions: {
     sendBTC: function(data) {
